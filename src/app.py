@@ -6,7 +6,12 @@ import aioredis
 import asyncio
 from hashlib import sha256
 import json
-from constants import API_URLS, SUCCESS_CODE
+import uvicorn
+
+API_URLS = {
+    "ip-api": "http://ip-api.com/json/",
+}
+SUCCESS_CODE = 200
 
 app = FastAPI()
 
@@ -65,6 +70,4 @@ async def post_request(ip_addresses: str = Path(..., title="The IP addresses, co
 
 
 if __name__ == "__main__":
-    import uvicorn
-
     uvicorn.run(app, host="127.0.0.1", port=8000)
