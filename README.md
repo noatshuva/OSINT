@@ -6,6 +6,18 @@ This application is a FastAPI service that fetches data from external APIs, cach
 
 ## How to Run
 
+### Running Locally
+
+Run the following commands:
+
+`sudo apt-get update && apt-get install -y redis-server`
+
+`pip install --no-cache-dir -r requirements.txt`
+
+`uvicorn src.app:app --host 0.0.0.0 --port 8000`
+
+The `uvicorn` command start the application and make it accessible at `http://localhost:8000`.
+
 ### Building the Docker Container
 
 To build the Docker container for the application, run the following command in your terminal:
