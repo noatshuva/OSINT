@@ -4,6 +4,8 @@
 
 This application is a FastAPI service that fetches data from external APIs, caches results in Redis, and returns the data to the client. It's designed to demonstrate asynchronous requests and caching mechanisms.
 
+### Python Version = 3.10
+
 ## How to Run
 
 ### Running Locally
